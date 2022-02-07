@@ -1,0 +1,28 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**/a",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/timer",
+        "destination": "../counterdown-timer/",
+        
+        "type": 301
+      }
+    ]
+  },
+  "emulators": {
+    "database": {
+      "port": 9000
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}
