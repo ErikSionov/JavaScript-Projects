@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown Timer ⏰</title>
 
-    <link rel="stylesheet" href="..\counterdown-timer\style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script>
-        // Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import { } from 'firebase/auth';
-// import { } from 'firebase/firestore';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyDmPlOJTfxVFcEe6uYUUsj5nI_GbgydOxE",
-    authDomain: "portfolio-erik.firebaseapp.com",
-    databaseURL: "https://portfolio-erik.firebaseio.com",
-    projectId: "portfolio-erik",
-    storageBucket: "portfolio-erik.appspot.com",
-    messagingSenderId: "559214005855",
-    appId: "1:559214005855:web:bab193cce806c12a7655ea"
-};
-
-// Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-
-    </script>
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDmPlOJTfxVFcEe6uYUUsj5nI_GbgydOxE",
+        authDomain: "portfolio-erik.firebaseapp.com",
+        databaseURL: "https://portfolio-erik.firebaseio.com",
+        projectId: "portfolio-erik",
+        storageBucket: "portfolio-erik.appspot.com",
+        messagingSenderId: "559214005855",
+        appId: "1:559214005855:web:bab193cce806c12a7655ea",
+      };
+      
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      </script>
+      <script src="app.js" defer></script>
+  </head>
+  <body>
     
-  <div>
-    <a href="/timer"><h1>Project 01: </h1><h3>Countdown Timer</h3></a>
-</div>
-</body>
+    <section id="whenSignedOut">
+      
+      <button id="signInBtn">Sign in with google</button>
+      
+    </section>
+    
+    <section id="whenSignedIn" hidden="true">
+      
+      <div id="userDetails"></div>
+      <button id="signOutBtn">Sign Out</button>
+    </section>
+    
+    <h1>Project Viewer</h1>
+    <div>
+      <a href="/timer">
+      <h2>Project 01:</h2>
+      <h3>Countdown Timer</h3>
+      </a>
+    </div>
+  </body>
 </html>
